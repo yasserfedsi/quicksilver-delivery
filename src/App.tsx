@@ -1,7 +1,12 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/home";
+
 export default function App() {
   return (
-    <div className="h-full flex justify-center items-center">
-      <h1 className="text-red-500">App</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
