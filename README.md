@@ -1,54 +1,114 @@
-# React + TypeScript + Vite
+# ⚡ Quicksilver Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, dynamic, and interactive web experience inspired by Quicksilver, built for the Gaussian Pick Hackathon.
 
-Currently, two official plugins are available:
+## 📖 Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#-features)
+- [Installation](#-installation)
+- [Running the Project](#-running-the-project)
+- [Build for Production](#-build-for-production)
+- [Linting](#-linting)
+- [Preview Production Build](#-preview-production-build)
+- [Folder Structure](#-folder-structure)
+- [Development Guidelines](#-development-guidelines)
+- [Submission Guidelines](#-submission-guidelines)
+- [License](#-license)
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dynamic Animations**: Smooth transitions and hover effects to create a sense of speed.
+- **Playful Interactions**: Interactive elements like buttons that zip away and reappear.
+- **Mobile-First Optimization**: Ensures a fast and responsive experience on all devices.
+- **Minimalist yet Bold Design**: A clean layout with strong typography and color contrast.
+- **Easter Egg**: Clicking the logo three times triggers a quick animation of Quicksilver running across the screen.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone https://github.com/yasserfedsi/quicksilver-delivery
+   cd quicksilver-delivery
+   ```
+
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
+
+## 🚦 Running the Project
+
+Start the development server:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will start a local development server, typically at `http://localhost:5173/`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗️ Build for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Generate an optimized production build:
+
+```sh
+npm run build
 ```
+
+The production-ready files will be in the `dist/` folder.
+
+## 🔍 Linting
+
+Check for linting errors:
+
+```sh
+npm run lint
+```
+
+## 👀 Preview Production Build
+
+To preview the built project:
+
+```sh
+npm run preview
+```
+
+## 📂 Folder Structure
+
+```
+/quicksilver-delivery
+│── /src        # Source files
+│── /public     # Static assets
+│── /dist       # Built files (after running npm run build)
+│── package.json
+│── vite.config.js
+│── README.md
+```
+
+## 📌 Development Guidelines
+
+- Follow best practices for **React** and **Vite**.
+- Use **Tailwind CSS** for styling.
+- Optimize images and assets for performance.
+- Implement smooth animations using **Framer Motion**.
+- Ensure the project runs efficiently across different devices and browsers.
+
+## 📜 Submission Guidelines
+
+As per the Gaussian Pick Hackathon rules:
+
+- Ensure the project follows the assigned design.
+- Submit a GitHub repository with a clear README.
+- Ensure all assets and dependencies are included.
+- The repository must include:
+  - The full **React source code**.
+  - A well-documented README file.
+  - Any additional assets required for the project.
+
+## 📝 License
+
+This project is created for the Gaussian Pick Hackathon and follows its guidelines. Use and modifications should align with the competition rules.
+
+---
+
+⚡ Let's make it fast, fun, and flawless—just like Quicksilver!
