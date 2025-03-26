@@ -90,7 +90,7 @@ npm run preview
 - Follow best practices for **React** and **Vite**.
 - Use **Tailwind CSS** for styling.
 - Optimize images and assets for performance.
-- Implement smooth animations using **Framer Motion**.
+- Implement smooth animations using **GSAP**.
 - Ensure the project runs efficiently across different devices and browsers.
 
 ## 📜 Submission Guidelines
