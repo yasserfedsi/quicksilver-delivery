@@ -1,9 +1,19 @@
+import { useState } from "react";
+import Popup from "../Popup/popup";
 import { images } from "../../lib/images";
 
 export default function Hero() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
-    <div className="relative w-full h-screen flex justify-center items-center">
-      <img src={images[11].src} alt={images[11].alt} className="w-1/2 h-auto" />
+    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
+        <img
+          src={images[11].src}
+          alt={images[11].alt}
+          className="w-1/2 h-auto cursor-pointer"
+          onClick={() => setIsPopupOpen(true)}
+        />
+        <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
       {/* Floating Boxes */}
       <img
@@ -18,7 +28,7 @@ export default function Hero() {
       />
 
       {/* Boxes Text */}
-      <p className="absolute top-[20%] left-[31%] text-white font-bold text-2xl">
+      <p className="absolute top-[20%] left-[27%] text-white font-bold text-4xl">
         Your Time <br /> Our Priority
       </p>
       <p className="absolute bottom-[20%] left-[26%] text-white font-bold text-2xl">
