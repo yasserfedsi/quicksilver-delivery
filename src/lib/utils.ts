@@ -57,3 +57,24 @@ export const moreCategories = [
     desc: "Discover more services.",
   },
 ];
+
+export const plans = [
+  {
+    title: "Basic Plan",
+    description: "Local delivery, up to 5 packages",
+    price: "$10",
+    per: "month",
+  },
+  {
+    title: "Standard Plan",
+    description: "Express delivery, up to 20 packages",
+    price: "$25",
+    per: "month",
+  },
+  {
+    title: "Premium Plan",
+    description: "International delivery, unlimited packages",
+    price: "$50",
+    per: "month",
+  },
+];
