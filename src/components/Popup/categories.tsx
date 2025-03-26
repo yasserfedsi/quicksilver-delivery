@@ -12,7 +12,7 @@ export default function Categories({ onClose }: { onClose: () => void }) {
             src={category.img}
             alt={category.title}
             onClick={onClose}
-            className="w-16 h-16 mb-2 cursor-pointer"
+            className="w-18 h-16 mb-2 cursor-pointer"
           />
           <p className="text-2xl font-bold">{category.title}</p>
           <p className="mt-2 text-gray-600">{category.desc}</p>
