@@ -4,6 +4,7 @@ import Categories from "./options/categories";
 import Navbar from "../home/navbar";
 import PopupPricing from "./options/pricing";
 import PopupTrack from "./options/tracking";
+import PopupFooter from "./options/footer";
 
 export default function PopupContent({ onClose }: { onClose: () => void }) {
   return (
@@ -33,6 +34,7 @@ export default function PopupContent({ onClose }: { onClose: () => void }) {
         <Categories onClose={onClose} />
         <PopupPricing />
         <PopupTrack />
+        <PopupFooter />
       </div>
     </div>
   );
