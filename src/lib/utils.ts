@@ -24,16 +24,19 @@ export const deliveryOptions = [
     img: images[0].src,
     title: "Same-Day Delivery",
     desc: "Get your packages delivered the same day.",
+    className: "w-24 h-24", // Enlarging the first image
   },
   {
-    img: images[2].src,
+    img: images[8].src,
     title: "Express Delivery",
     desc: "Urgent shipping within the same day.",
+    className: "w-24 h-24", // Enlarging the second image
   },
   {
     img: images[3].src,
     title: "International Delivery",
     desc: "Reliable shipping across the globe.",
+    className: "w-24 h-24", // Keeping the default size for other images
   },
 ];
 
