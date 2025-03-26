@@ -16,7 +16,7 @@ export default function DeliveryOptions() {
           <div>
             <p className="text-2xl font-bold text-orange-600">{option.title}</p>
             <p className="text-gray-600">{option.desc}</p>
-            <button className="mt-2 bg-orange-500 text-white px-4 py-2 rounded">
+            <button className="mt-2 bg-primary text-white px-4 py-2 rounded">
               Check Now!
             </button>
           </div>
