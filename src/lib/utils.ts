@@ -7,15 +7,15 @@ export const buttons = [
   },
   {
     text: "Services",
-    link: "#",
+    link: "#categories",
   },
   {
     text: "Pricing",
-    link: "#",
+    link: "#pricing",
   },
   {
     text: "Track Order",
-    link: "#",
+    link: "#track",
   },
 ];
 
