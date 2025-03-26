@@ -1,4 +1,4 @@
-import { moreCategories } from "../../lib/utils";
+import { moreCategories } from "../../../lib/utils";
 
 export default function Categories({ onClose }: { onClose: () => void }) {
   return (

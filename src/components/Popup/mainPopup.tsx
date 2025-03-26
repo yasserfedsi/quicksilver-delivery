@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import PopupHeader from "./Popup/header";
-import PopupContent from "./Popup/content";
-import PopupFooter from "./Popup/footer";
+import PopupHeader from "./header";
+import PopupContent from "./content";
 
 interface PopupProps {
   isOpen: boolean;
@@ -65,7 +64,6 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
       >
         <PopupHeader onClose={onClose} />
         <PopupContent onClose={onClose} />
-        <PopupFooter />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { plans } from "../../lib/utils";
+import { plans } from "../../../lib/utils";
 
 export default function PopupPricing() {
   return (
