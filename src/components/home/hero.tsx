@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Popup from "../Popup/popup";
+import Popup from "../mainPopup";
 import { images } from "../../lib/images";
 
 export default function Hero() {
