@@ -11,7 +11,7 @@ export default function DeliveryOptions() {
           <img
             src={option.img}
             alt={option.title}
-            className="w-16 h-16 object-contain"
+            className={`object-contain ${option.className}`}
           />
           <div>
             <p className="text-2xl font-bold text-orange-600">{option.title}</p>
