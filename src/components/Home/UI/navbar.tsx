@@ -1,5 +1,5 @@
-import { buttons } from "../../lib/utils";
-import { images } from "../../lib/images";
+import { buttons } from "../../../lib/utils";
+import { images } from "../../../lib/images";
 
 export default function Navbar() {
   return (

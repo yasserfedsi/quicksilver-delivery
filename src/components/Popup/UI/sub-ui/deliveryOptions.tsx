@@ -1,4 +1,4 @@
-import { deliveryOptions } from "../../../lib/utils";
+import { deliveryOptions } from "../../../../lib/utils";
 
 export default function DeliveryOptions() {
   return (

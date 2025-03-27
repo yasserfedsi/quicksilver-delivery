@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import PopupHeader from "./header";
-import PopupContent from "./content";
+import PopupHeader from "./UI/header";
+import PopupContent from "./UI/content";
 
 interface PopupProps {
   isOpen: boolean;

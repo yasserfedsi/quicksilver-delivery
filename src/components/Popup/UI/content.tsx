@@ -1,10 +1,10 @@
-import { images } from "../../lib/images";
-import DeliveryOptions from "./options/deliveryOptions";
-import Categories from "./options/categories";
-import Navbar from "../home/navbar";
-import PopupPricing from "./options/pricing";
-import PopupTrack from "./options/tracking";
-import PopupFooter from "./options/footer";
+import { images } from "../../../lib/images";
+import DeliveryOptions from "./sub-ui/deliveryOptions";
+import Categories from "./sub-ui/categories";
+import Navbar from "../../Home/UI/navbar";
+import PopupPricing from "./sub-ui/pricing";
+import PopupTrack from "./sub-ui/tracking";
+import PopupFooter from "./sub-ui/footer";
 
 export default function PopupContent({ onClose }: { onClose: () => void }) {
   return (
