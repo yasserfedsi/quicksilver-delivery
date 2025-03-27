@@ -1,6 +1,11 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function PopupFooter() {
+  const handleDownload = () => {
+    const appLink = "https://play.google.com/";
+    window.open(appLink, "_blank");
+  };
+
   return (
     <footer className="bg-primary px-6 md:px-12 lg:px-16 mt-10 rounded-lg text-white">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-16">
@@ -11,7 +16,9 @@ export default function PopupFooter() {
             We provide fast, reliable, and hassle-free delivery services. Your
             satisfaction is our top priority.
           </p>
-          <h3 className="text-lg font-semibold text-white/90">Why Choose Us?</h3>
+          <h3 className="text-lg font-semibold text-white/90">
+            Why Choose Us?
+          </h3>
           <ul className="text-white/80 list-disc list-inside mt-2 mb-4 space-y-1">
             <li>Real-time tracking</li>
             <li>Friendly delivery agents</li>
@@ -25,7 +32,10 @@ export default function PopupFooter() {
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p className="text-white/80">
             📧 Email:{" "}
-            <a href="mailto:support@quicksilver-delivery.com" className="hover:underline">
+            <a
+              href="mailto:support@quicksilver-delivery.com"
+              className="hover:underline"
+            >
               support@quicksilver-delivery.com
             </a>
           </p>
@@ -58,7 +68,10 @@ export default function PopupFooter() {
             <p className="text-white/80 mb-4">
               Get the best delivery experience on the go.
             </p>
-            <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-gray-800 transition-transform transform hover:scale-105">
+            <button
+              className="bg-black text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-gray-800 transition-transform transform hover:scale-105"
+              onClick={handleDownload}
+            >
               Download Now
             </button>
           </div>
