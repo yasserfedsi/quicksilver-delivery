@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Popup from "../Popup/mainPopup";
-import { images } from "../../lib/images";
+import Popup from "../../Popup/page";
+import { images } from "../../../lib/images";
 
 export default function Hero() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);

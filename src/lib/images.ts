@@ -13,6 +13,7 @@ import phone_moto from "../assets/phone_moto.png";
 import logo from "../assets/quicksilver.png";
 import shopping from "../assets/shopping.png";
 import shoes from "../assets/shoes.png";
+import history from "../assets/history.png";
 
 export const images = [
   {
@@ -74,5 +75,9 @@ export const images = [
   {
     src: shoes,
     alt: "Image 14",
+  },
+  {
+    src: history,
+    alt: "Image 15",
   },
 ];

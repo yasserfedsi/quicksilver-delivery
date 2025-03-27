@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import ImageGrid from "../images-ui/imageGrid";
+import { X } from "lucide-react";
 import { gsap } from "gsap";
-import PopupHeader from "./header";
-import PopupContent from "./content";
 
-interface PopupProps {
+interface CategoryPopupProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function Popup({ isOpen, onClose }: PopupProps) {
+const CategoryPopup: React.FC<CategoryPopupProps> = ({ isOpen, onClose }) => {
   const popupRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -37,34 +37,28 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
     }
   }, [isOpen]);
 
-  // Close popup when the user presses "Escape"
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose(); // Close the popup
-      }
-    };
-
-    if (isOpen) {
-      window.addEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
   if (!visible) return null;
 
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 backdrop-blur-md z-50">
       <div
         ref={popupRef}
-        className="relative w-full h-full bg-white flex flex-col overflow-hidden"
+        className="relative w-full h-full bg-[#FF8303] flex flex-col overflow-hidden"
       >
-        <PopupHeader onClose={onClose} />
-        <PopupContent onClose={onClose} />
+        {/* Close Button (X) */}
+        <button 
+          className="absolute top-4 right-4 bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition"
+          onClick={onClose}
+        >
+          <X size={24} />
+        </button>
+
+        <div className="flex-1 overflow-y-auto p-8">
+          <ImageGrid />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default CategoryPopup;

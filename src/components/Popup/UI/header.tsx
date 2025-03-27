@@ -1,4 +1,4 @@
-import { X } from "lucide-react"; // Importing an icon from lucide-react
+import { X } from "lucide-react";
 
 export default function PopupHeader({ onClose }: { onClose: () => void }) {
   return (
