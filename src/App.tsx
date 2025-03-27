@@ -1,14 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/home";
+import React from "react";
 
-export default function App() {
-  return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </>
-  );
-}
+import ImageGrid from "./ImageGrid";
+
+const App: React.FC = () => {
+
+return (
+
+<div className="bg-[#FF8303] min-h-sceen flex flex-col items-center justify-center"> 
+  
+  <ImageGrid />
+
+</div>
+);
+};
+export default App;
