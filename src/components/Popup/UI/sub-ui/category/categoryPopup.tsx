@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImageGrid from "../images-ui/imageGrid";
 import { X } from "lucide-react";
 import { gsap } from "gsap";
@@ -6,15 +6,18 @@ import { gsap } from "gsap";
 interface CategoryPopupProps {
   isOpen: boolean;
   onClose: () => void;
+  category: { img: string; title: string; desc: string };
 }
 
-const CategoryPopup: React.FC<CategoryPopupProps> = ({ isOpen, onClose }) => {
+export default function CategoryPopup({ isOpen, onClose }: CategoryPopupProps) {
   const popupRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const [originalOverflow, setOriginalOverflow] = useState("");
 
   useEffect(() => {
     if (isOpen) {
       setVisible(true);
+      setOriginalOverflow(document.body.style.overflow);
       document.body.style.overflow = "hidden";
 
       setTimeout(() => {
@@ -25,14 +28,15 @@ const CategoryPopup: React.FC<CategoryPopupProps> = ({ isOpen, onClose }) => {
         );
       }, 10);
     } else if (visible) {
-      document.body.style.overflow = "auto";
-
       gsap.to(popupRef.current, {
         y: "100%",
         opacity: 0,
         duration: 0.6,
         ease: "power3.in",
-        onComplete: () => setVisible(false),
+        onComplete: () => {
+          setVisible(false);
+          document.body.style.overflow = originalOverflow; // Restore original state
+        },
       });
     }
   }, [isOpen]);
@@ -46,7 +50,7 @@ const CategoryPopup: React.FC<CategoryPopupProps> = ({ isOpen, onClose }) => {
         className="relative w-full h-full bg-[#FF8303] flex flex-col overflow-hidden"
       >
         {/* Close Button (X) */}
-        <button 
+        <button
           className="absolute top-4 right-4 bg-gray-200 p-2 rounded-full hover:bg-gray-300 transition"
           onClick={onClose}
         >
@@ -59,6 +63,4 @@ const CategoryPopup: React.FC<CategoryPopupProps> = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};
-
-export default CategoryPopup;
+}
