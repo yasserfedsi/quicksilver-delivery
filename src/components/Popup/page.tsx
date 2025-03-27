@@ -63,7 +63,7 @@ export default function Popup({ isOpen, onClose }: PopupProps) {
         className="relative w-full h-full bg-white flex flex-col overflow-hidden"
       >
         <PopupHeader onClose={onClose} />
-        <PopupContent onClose={onClose} />
+        <PopupContent />
       </div>
     </div>
   );

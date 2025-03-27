@@ -4,7 +4,7 @@ import { images } from "../../../lib/images";
 export default function Navbar() {
   return (
     <div className="bg-white p-4 m-4 rounded-2xl relative shadow-lg flex flex-col items-center sm:items-stretch">
-      <div className="absolute top-4 right-4 flex flex-col items-center border border-primary  shadow-md px-4 py-2 rounded-lg">
+      <div className="absolute top-4 right-4 flex flex-col items-center border border-primary shadow-md px-4 py-2 rounded-lg">
         <img
           src={images[10].src}
           alt="Navbar Image"

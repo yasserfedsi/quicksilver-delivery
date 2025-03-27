@@ -1,3 +1,4 @@
+import { Package, Truck, MapPin, CheckCircle } from "lucide-react";
 import { images } from "./images";
 
 export const buttons = [
@@ -52,9 +53,32 @@ export const moreCategories = [
     desc: "Shop the latest fashion trends.",
   },
   {
-    img: "",
+    img: images[15].src,
     title: "Find More",
     desc: "Discover more services.",
+  },
+];
+
+export const steps = [
+  {
+    id: 1,
+    label: "Order Confirmed",
+    icon: Package,
+  },
+  {
+    id: 2,
+    label: "Picked by Courier",
+    icon: Truck,
+  },
+  {
+    id: 3,
+    label: "On the Way",
+    icon: MapPin,
+  },
+  {
+    id: 4,
+    label: "Ready for Pickup",
+    icon: CheckCircle,
   },
 ];
 
