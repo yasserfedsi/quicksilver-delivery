@@ -1,12 +1,12 @@
 import { images } from "../../../lib/images";
 import DeliveryOptions from "./sub-ui/deliveryOptions";
-import Categories from "./sub-ui/categories";
+import Categories from "./sub-ui/category/categories";
 import Navbar from "../../Home/UI/navbar";
 import PopupPricing from "./sub-ui/pricing";
 import PopupTrack from "./sub-ui/tracking";
 import PopupFooter from "./sub-ui/footer";
 
-export default function PopupContent({ onClose }: { onClose: () => void }) {
+export default function PopupContent() {
   return (
     <div className="flex flex-col h-full">
       {/* Scrollable content */}
@@ -31,7 +31,7 @@ export default function PopupContent({ onClose }: { onClose: () => void }) {
         <h2 className="text-3xl font-bold text-gray-800 mt-12 mb-4 text-center">
           Explore More Categories
         </h2>
-        <Categories onClose={onClose} />
+        <Categories />
         <PopupPricing />
         <PopupTrack />
         <PopupFooter />
