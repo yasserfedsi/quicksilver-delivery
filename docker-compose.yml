@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  vite-app:
+    image: vite-nginx
+    build: .
+    ports:
+      - "3000:80"
+    restart: always
