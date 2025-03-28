@@ -21,7 +21,7 @@ A fast, dynamic, and interactive web experience inspired by Quicksilver, built f
 - **Playful Interactions**: Interactive elements like buttons that zip away and reappear.
 - **Mobile-First Optimization**: Ensures a fast and responsive experience on all devices.
 - **Minimalist yet Bold Design**: A clean layout with strong typography and color contrast.
-- **Easter Egg**: Clicking the logo three times triggers a quick animation of Quicksilver running across the screen.
+- **Easter Egg**: Clicking the logo triggers a quick animation of Quicksilver running across the screen.
 
 ## 🛠️ Installation
 
